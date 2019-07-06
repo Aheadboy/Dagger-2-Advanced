@@ -22,9 +22,7 @@ public class PicassoModule {
     @RandomUserApplicationScope
     @Provides
     public Picasso picasso(@ApplicationContext Context context, OkHttp3Downloader okHttp3Downloader){
-        return new Picasso.Builder(context).
-                downloader(okHttp3Downloader).
-                build();
+        return new Picasso.Builder(context).downloader(okHttp3Downloader).build();
     }
 
     @Provides

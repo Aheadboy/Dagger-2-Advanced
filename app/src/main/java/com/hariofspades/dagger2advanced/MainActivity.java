@@ -55,9 +55,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void afterDagger() {
-        RandomUserComponent daggerRandomUserComponent = DaggerRandomUserComponent.builder()
-                .contextModule(new ContextModule(this))
-                .build();
+        RandomUserComponent daggerRandomUserComponent = DaggerRandomUserComponent.builder().contextModule(new ContextModule(this)).build();
         picasso = daggerRandomUserComponent.getPicasso();
         randomUsersApi = daggerRandomUserComponent.getRandomUserService();
 
